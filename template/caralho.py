@@ -135,8 +135,7 @@ if __name__ == "__main__":
         Item(":/produtos/bones/One piece, Naruto, Simpsons/simpsons-preto-bone.png", 2, 20.00, 16),
         Item(":/produtos/bones/One piece, Naruto, Simpsons/simpsons-preto-bone.png", 2, 20.00, 17),
         Item(":/produtos/bones/One piece, Naruto, Simpsons/simpsons-preto-bone.png", 2, 20.00, 18),
-        Item(":/produtos/bones/One piece, Naruto, Simpsons/simpsons-preto-bone.png", 2, 20.00, 19),
-        Item(":/produtos/bones/One piece, Naruto, Simpsons/simpsons-preto-bone.png", 2, 20.00, 20),
+        Item(":/produtos/bones/One piece, Naruto, Simpsons/simpsons-preto-bone.png", 2, 20.00, 19)
     ]
 
     app = QtWidgets.QApplication(sys.argv)
