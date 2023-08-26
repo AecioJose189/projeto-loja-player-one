@@ -10,7 +10,6 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-
 class Ui_Cadastro(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
