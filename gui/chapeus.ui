@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>680</height>
+    <height>670</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,15 +19,16 @@
   <widget class="QLabel" name="label_27">
    <property name="geometry">
     <rect>
-     <x>310</x>
+     <x>300</x>
      <y>530</y>
-     <width>201</width>
+     <width>221</width>
      <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Roboto</family>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="text">
@@ -71,15 +72,16 @@ background-color: rgb(243, 243, 243);</string>
   <widget class="QLabel" name="label_26">
    <property name="geometry">
     <rect>
-     <x>90</x>
+     <x>80</x>
      <y>530</y>
-     <width>191</width>
+     <width>211</width>
      <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Roboto</family>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="text">
@@ -162,13 +164,14 @@ border-color:black;
     <rect>
      <x>540</x>
      <y>530</y>
-     <width>211</width>
+     <width>221</width>
      <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Roboto</family>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="text">
@@ -326,17 +329,18 @@ border-color:black;
     <rect>
      <x>310</x>
      <y>240</y>
-     <width>201</width>
+     <width>221</width>
      <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Roboto</family>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CHAPÉU UNISSEX ONE PIECE - BRANCO&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;R$ 30,00&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CHAPÉU UNISSEX ONE PIECE - PRETO&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;R$ 30,00&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="botao_add_chapeu_preto_onep">
@@ -419,17 +423,18 @@ border-color:black;
     <rect>
      <x>540</x>
      <y>240</y>
-     <width>211</width>
+     <width>221</width>
      <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Roboto</family>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CHAPÉU UNISSEX SIMPSONS - BRANCO&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;R$ 30,00&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CHAPÉU UNISSEX SIMPSONS - PRETO&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;R$ 30,00&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="botao_add_chapeu_preto_naruto">
@@ -472,19 +477,20 @@ border-color:black;
   <widget class="QLabel" name="label_30">
    <property name="geometry">
     <rect>
-     <x>90</x>
+     <x>80</x>
      <y>240</y>
-     <width>191</width>
+     <width>211</width>
      <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Roboto</family>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CHAPÉU UNISSEX NARUTO - BRANCO&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;R$ 30,00&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CHAPÉU UNISSEX NARUTO - PRETO&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;R$ 30,00&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="botao_voltar">
@@ -533,7 +539,7 @@ border-color:black;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">image: url(:/icons/icones/carr.png);
+    <string notr="true">image: url(:/imgicons/icones/carr.png);
 
 color: rgb(255, 255, 255);
 border-style:outset;
@@ -546,7 +552,7 @@ border-color:black;</string>
   </widget>
  </widget>
  <resources>
-  <include location="../img-icons.qrc"/>
+  <include location="img-icons.qrc"/>
   <include location="../produtos/produtos.qrc"/>
  </resources>
  <connections/>

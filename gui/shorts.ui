@@ -21,13 +21,14 @@
     <rect>
      <x>70</x>
      <y>210</y>
-     <width>161</width>
+     <width>141</width>
      <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Kristen ITC</family>
+     <family>DejaVu Sans</family>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="text">
@@ -98,7 +99,7 @@ background-color: rgb(243, 243, 243);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">image: url(:/icons/icones/carr.png);
+    <string notr="true">image: url(:/imgicons/icones/carr.png);
 
 color: rgb(255, 255, 255);
 border-style:outset;
@@ -314,13 +315,14 @@ background-color: rgb(243, 243, 243);</string>
     <rect>
      <x>320</x>
      <y>210</y>
-     <width>171</width>
+     <width>151</width>
      <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Kristen ITC</family>
+     <family>DejaVu Sans</family>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="text">
@@ -332,13 +334,14 @@ background-color: rgb(243, 243, 243);</string>
     <rect>
      <x>550</x>
      <y>210</y>
-     <width>161</width>
+     <width>151</width>
      <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Kristen ITC</family>
+     <family>DejaVu Sans</family>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="text">
@@ -494,13 +497,14 @@ background-color: rgb(243, 243, 243);</string>
     <rect>
      <x>320</x>
      <y>490</y>
-     <width>171</width>
+     <width>151</width>
      <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Kristen ITC</family>
+     <family>DejaVu Sans</family>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="text">
@@ -512,13 +516,14 @@ background-color: rgb(243, 243, 243);</string>
     <rect>
      <x>70</x>
      <y>490</y>
-     <width>161</width>
+     <width>131</width>
      <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Kristen ITC</family>
+     <family>DejaVu Sans</family>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="text">
@@ -530,13 +535,14 @@ background-color: rgb(243, 243, 243);</string>
     <rect>
      <x>550</x>
      <y>490</y>
-     <width>161</width>
+     <width>141</width>
      <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Kristen ITC</family>
+     <family>DejaVu Sans</family>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="text">
@@ -768,7 +774,7 @@ border-bottom-color: rgb(173, 173, 173);</string>
  </widget>
  <resources>
   <include location="../produtos/produtos.qrc"/>
-  <include location="../img-icons.qrc"/>
+  <include location="img-icons.qrc"/>
  </resources>
  <connections/>
 </ui>

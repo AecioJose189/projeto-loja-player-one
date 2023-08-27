@@ -14,7 +14,8 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(255, 255, 255);</string>
+   <string notr="true">background-color: rgb(255, 255, 255);
+</string>
   </property>
   <widget class="QPushButton" name="botao_add_camisa_branca_simpsonss">
    <property name="geometry">
@@ -95,13 +96,16 @@ border-color:black;
     <rect>
      <x>90</x>
      <y>230</y>
-     <width>161</width>
-     <height>41</height>
+     <width>151</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Kristen ITC</family>
+     <family>Roboto</family>
+     <pointsize>8</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="text">
@@ -155,8 +159,7 @@ background-color: rgb(243, 243, 243);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">image: url(:/icons/icones/Gamepad(1).png);
-image: url(:/icons/icones/Gamepad (3).png);</string>
+    <string notr="true">image: url(:/icons/icones/Gamepad (3).png);</string>
    </property>
    <property name="text">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -273,15 +276,18 @@ border-color:black;
   <widget class="QLabel" name="label_19">
    <property name="geometry">
     <rect>
-     <x>340</x>
+     <x>330</x>
      <y>230</y>
-     <width>171</width>
-     <height>41</height>
+     <width>161</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Kristen ITC</family>
+     <family>Roboto</family>
+     <pointsize>8</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="text">
@@ -329,13 +335,16 @@ border-color:black;
     <rect>
      <x>570</x>
      <y>510</y>
-     <width>161</width>
-     <height>41</height>
+     <width>151</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Kristen ITC</family>
+     <family>Roboto</family>
+     <pointsize>8</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="text">
@@ -365,12 +374,15 @@ background-color: rgb(243, 243, 243);</string>
      <x>570</x>
      <y>230</y>
      <width>161</width>
-     <height>41</height>
+     <height>51</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Kristen ITC</family>
+     <family>Roboto</family>
+     <pointsize>8</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="text">
@@ -436,13 +448,16 @@ background-color: rgb(243, 243, 243);</string>
     <rect>
      <x>340</x>
      <y>510</y>
-     <width>171</width>
-     <height>41</height>
+     <width>161</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Kristen ITC</family>
+     <family>Roboto</family>
+     <pointsize>8</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="text">
@@ -460,6 +475,7 @@ background-color: rgb(243, 243, 243);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">image: url(:/icons/icones/carr.png);
+image: url(:/imgicons/icones/carr.png);
 
 color: rgb(255, 255, 255);
 border-style:outset;
@@ -512,13 +528,16 @@ border-color:black;
     <rect>
      <x>90</x>
      <y>510</y>
-     <width>161</width>
-     <height>41</height>
+     <width>151</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Kristen ITC</family>
+     <family>Roboto</family>
+     <pointsize>8</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="text">
@@ -767,7 +786,7 @@ border-bottom-color: rgb(173, 173, 173);</string>
  </widget>
  <resources>
   <include location="../produtos/produtos.qrc"/>
-  <include location="../img-icons.qrc"/>
+  <include location="img-icons.qrc"/>
  </resources>
  <connections/>
 </ui>
