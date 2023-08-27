@@ -27,8 +27,7 @@ class paginainicial(QDialog):
 
     def sair(self):
         current_dir = os.path.dirname(__file__)
-        with open(os.path.join(current_dir, '..', 'db', 'sessao.json', 'w')) as sessao_arquivo:
-            print('Salvando sessão...')
+        with open(os.path.join(current_dir, '..', 'db', 'sessao.json'), 'w') as sessao_arquivo:
             sessao_arquivo.write('')
 
         self.window = self.tela_inicial.show()
