@@ -1,11 +1,11 @@
 from PyQt5.QtWidgets import QDialog
 from template.login import Ui_Login
-from template.paginainicial import Ui_Inicial
 import os
 import json
 
 from modulos.cadastro import Cadastro
 from modulos.paginainicial import paginainicial
+
 
 class Login(QDialog):
     def __init__(self, *args, **argvs):
@@ -20,10 +20,10 @@ class Login(QDialog):
         usuario = self.ui.input_usuario.text()
         senha = self.ui.input_senha.text()
 
-        if usuario=='' or senha =='':
+        if usuario == '' or senha == '':
             # Mostrar um dialog
             return
-        
+
         current_dir = os.path.dirname(__file__)
         usuarios_file_path = os.path.join(
             current_dir, '..', 'db', 'usuarios.json')
@@ -37,14 +37,15 @@ class Login(QDialog):
                     self.window = paginainicial(self)
                     self.window.show()
                     self.hide()
-                    if self.ui.check_lembrar.isChecked():
-                        with open(sessao_file_path, 'w') as sessao_arquivo:
-                            print('Salvando sessão...')
-                            json.dump(
-                                {'id': user['id']}, sessao_arquivo)
+                    with open(sessao_file_path, 'w') as sessao_arquivo:
+                        print('Salvando sessão...')
+                        json.dump(
+                            {'id': user['id']}, sessao_arquivo)
+
     def cadastre_se(self):
         self.window = Cadastro(self)
         self.window.show()
         self.hide()
+
     def sair(self):
         self.hide()
