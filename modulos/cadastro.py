@@ -64,12 +64,10 @@ class Cadastro(QDialog):
 
         with open(caminho_arquivo_usuarios, "w") as arquivo_usuarios:
             json.dump(usuarios, arquivo_usuarios)
-        print("Credenciais salvas com sucesso!")
 
         # Atualiza o id da sessao
         with open(caminho_arquivo_sessao, "w") as arquivo_sessao:
             json.dump({'id': data['id']}, arquivo_sessao)
-        print("Sessão salva com sucesso!")
 
         self.window = paginainicial(self)
         self.window.show()

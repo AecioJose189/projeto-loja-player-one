@@ -3,7 +3,6 @@ import os
 
 
 def get_carrinho():
-    print('get_carrinho')
     session_file_path = os.path.join(
         os.path.dirname(__file__), '..', 'db', 'sessao.json')
     with open(session_file_path, 'r') as session_file:
@@ -16,21 +15,17 @@ def get_carrinho():
 
     for user in usuarios:
         if user['id'] == session['id']:
-            print(user['carrinho'])
             return user['carrinho']
 
     return []
 
 
 def add_to_carrinho(id):
-    print('Adicionando item ao carrinho...')
-
     session_file_path = os.path.join(
         os.path.dirname(__file__), '..', 'db', 'sessao.json')
     with open(session_file_path, 'r') as session_file:
         session = json.load(session_file)
     if session['id'] is None:
-        print('session invalido')
         return
 
     usuarios_file_path = os.path.join(
@@ -48,7 +43,6 @@ def add_to_carrinho(id):
     )
 
     if item_a_ser_adicionado is None:
-        print('item nao encontrado')
         return
 
     for user in usuarios:
@@ -93,14 +87,15 @@ def save_carrinho(carrinho):
         json.dump(usuarios, usuarios_file)
 
 
-def get_sub_total():
+def get_sub_total() -> float:
     carrinho = get_carrinho()
     if len(carrinho) > 0:
         return sum(item['preco'] * item['quantidade'] for item in carrinho)
     return 0
 
 
-def get_total():
-    subtotal = get_sub_total()
+def get_total() -> float:
+    subtotal: float = get_sub_total()
     if subtotal >= 130:
         return subtotal * 0.8
+    return subtotal

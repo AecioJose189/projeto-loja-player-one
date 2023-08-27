@@ -33,12 +33,10 @@ class Login(QDialog):
             usuarios = json.load(arquivo)
             for user in usuarios:
                 if user['usuario'] == usuario and user['senha'] == senha:
-                    print('Login realizado com sucesso!')
                     self.window = paginainicial(self)
                     self.window.show()
                     self.hide()
                     with open(sessao_file_path, 'w') as sessao_arquivo:
-                        print('Salvando sessão...')
                         json.dump(
                             {'id': user['id']}, sessao_arquivo)
 
@@ -48,4 +46,5 @@ class Login(QDialog):
         self.hide()
 
     def sair(self):
+        self.close()
         self.hide()
