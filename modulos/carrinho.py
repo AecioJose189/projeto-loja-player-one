@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from PyQt5.QtWidgets import QDialog
-from modulos.carrinho_funcs import get_carrinho, save_carrinho
+from modulos.carrinho_funcs import get_carrinho, get_sub_total, get_total, save_carrinho
 from template.carrinho import Ui_Carrinho
 from PyQt5 import QtCore, QtWidgets
 
@@ -24,6 +24,14 @@ class PaginaCarrinho(QDialog):
             Item(item['id'], item['imagem'], item['quantidade'], item['preco']) for item in get_carrinho()
         ]
 
+        self.ui.label_subtotal.setText(
+            f"Subtotal: {self.get_string_reais(get_sub_total())}")
+        self.ui.label_subtotal.adjustSize()
+
+        self.ui.label_total.setText(
+            f"Total: {self.get_string_reais(get_total())}")
+        self.ui.label_total.adjustSize()
+
         for item in self.carrinho:
             self.addItem(item)
 
@@ -39,6 +47,14 @@ class PaginaCarrinho(QDialog):
 
         for item in self.carrinho:
             self.addItem(item)
+
+        self.ui.label_subtotal.setText(
+            f"Subtotal: {self.get_string_reais(get_sub_total())}")
+        self.ui.label_subtotal.adjustSize()
+
+        self.ui.label_total.setText(
+            f"Total: {self.get_string_reais(get_total())}")
+        self.ui.label_total.adjustSize()
 
     def voltando(self):
         self.window = self.tela_inicial.show()
@@ -92,4 +108,4 @@ class PaginaCarrinho(QDialog):
         self.refresh_ui()
 
     def get_string_reais(self, value: float) -> str:
-        return f'R$ {value:.2f}'.replace('.', ',')
+        return 'R$ 0,00' if value is None else f'R$ {value:.2f}'.replace('.', ',')
