@@ -1,4 +1,5 @@
 from PyQt5.QtWidgets import QDialog
+from modulos.carrinho import PaginaCarrinho
 from modulos.carrinho_funcs import add_to_carrinho
 from template.paginainicial import Ui_Inicial
 from template.camisas import Ui_Camisas
@@ -22,9 +23,15 @@ class paginacamisas(QDialog):
             lambda: add_to_carrinho(5))
         self.ui.botao_add_camisa_preta_simpsons.clicked.connect(
             lambda: add_to_carrinho(6))
+        self.ui.botao_carrinho.clicked.connect(self.carrinho)
         self.tela_inicial = tela_inicial
 
     def voltando(self):
         self.window = self.tela_inicial.show()
         self.clearMask()
         self.destroy()
+
+    def carrinho(self):
+        self.window = PaginaCarrinho(self)
+        self.window.show()
+        self.hide()

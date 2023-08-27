@@ -1,7 +1,9 @@
 from PyQt5.QtWidgets import QDialog
+from modulos.carrinho import PaginaCarrinho
 from template.paginainicial import Ui_Inicial
 from template.shorts import Ui_Shorts
 from modulos.carrinho_funcs import add_to_carrinho
+
 
 class paginashorts(QDialog):
     def __init__(self, tela_inicial, *args, **argvs):
@@ -21,8 +23,15 @@ class paginashorts(QDialog):
             lambda: add_to_carrinho(11))
         self.ui.botao_add_short_rosa_onep.clicked.connect(
             lambda: add_to_carrinho(12))
+        self.ui.botao_carrinho.clicked.connect(self.carrinho)
         self.tela_inicial = tela_inicial
+
     def voltando(self):
         self.window = self.tela_inicial.show()
         self.clearMask()
         self.destroy()
+
+    def carrinho(self):
+        self.window = PaginaCarrinho(self)
+        self.window.show()
+        self.hide()
