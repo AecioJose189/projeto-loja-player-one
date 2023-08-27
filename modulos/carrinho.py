@@ -1,12 +1,13 @@
 from dataclasses import dataclass
 from PyQt5.QtWidgets import QDialog
-from modulos.carrinho_funcs import get_carrinho
+from modulos.carrinho_funcs import get_carrinho, save_carrinho
 from template.carrinho import Ui_Carrinho
 from PyQt5 import QtCore, QtWidgets
 
 
 @dataclass
 class Item:
+    id: int
     image: str
     quantity: int
     price: float
@@ -18,9 +19,23 @@ class PaginaCarrinho(QDialog):
         self.ui = Ui_Carrinho()
         self.ui.setupUi(self)
         self.tela_inicial = tela_inicial
-        self.carrinho = [
-            Item(item['imagem'], item['quantidade'], item['preco']) for item in get_carrinho()
+        self.ui.button_voltar.clicked.connect(self.voltando)
+        self.carrinho: list[Item] = [
+            Item(item['id'], item['imagem'], item['quantidade'], item['preco']) for item in get_carrinho()
         ]
+
+        for item in self.carrinho:
+            self.addItem(item)
+
+    def refresh_ui(self):
+        self.carrinho = [
+            Item(item['id'], item['imagem'], item['quantidade'], item['preco']) for item in get_carrinho()
+        ]
+
+        for i in reversed(range(self.ui.vBox.count())):
+            item = self.ui.vBox.itemAt(i)
+            widget = item.widget()
+            widget.deleteLater()
 
         for item in self.carrinho:
             self.addItem(item)
@@ -50,10 +65,10 @@ class PaginaCarrinho(QDialog):
         item_price.setAlignment(QtCore.Qt.AlignCenter)
 
         item_quantity = QtWidgets.QSpinBox(item_layout_widget)
-        item_quantity.setMinimum(1)
+        item_quantity.setMinimum(0)
         item_quantity.setValue(item.quantity)
-        item_quantity.valueChanged.connect(lambda value: item_price.setText(
-            self.get_string_reais(item.price * value)))
+        item_quantity.valueChanged.connect(
+            lambda value: self.on_quantity_changed(value, item.id))
 
         item_layout.addWidget(item_image)
         item_layout.addWidget(item_quantity)
@@ -61,5 +76,20 @@ class PaginaCarrinho(QDialog):
 
         self.ui.vBox.addWidget(item_layout_widget)
 
-    def get_string_reais(self, value: float):
+    def on_quantity_changed(self, value: int, id: int):
+        carrinho = get_carrinho()
+        for item in carrinho:
+
+            if item['id'] == id:
+                if value == 0:
+                    carrinho.remove(item)
+                    break
+                item['quantidade'] = value
+                break
+
+        save_carrinho(carrinho)
+
+        self.refresh_ui()
+
+    def get_string_reais(self, value: float) -> str:
         return f'R$ {value:.2f}'.replace('.', ',')

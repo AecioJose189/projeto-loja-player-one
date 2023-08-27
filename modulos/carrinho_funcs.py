@@ -3,6 +3,7 @@ import os
 
 
 def get_carrinho():
+    print('get_carrinho')
     session_file_path = os.path.join(
         os.path.dirname(__file__), '..', 'db', 'sessao.json')
     with open(session_file_path, 'r') as session_file:
@@ -15,15 +16,22 @@ def get_carrinho():
 
     for user in usuarios:
         if user['id'] == session['id']:
+            print(user['carrinho'])
             return user['carrinho']
+
     return []
 
 
 def add_to_carrinho(id):
+    print('Adicionando item ao carrinho...')
+
     session_file_path = os.path.join(
         os.path.dirname(__file__), '..', 'db', 'sessao.json')
     with open(session_file_path, 'r') as session_file:
         session = json.load(session_file)
+    if session['id'] is None:
+        print('session invalido')
+        return
 
     usuarios_file_path = os.path.join(
         os.path.dirname(__file__), '..', 'db', 'usuarios.json')
@@ -40,6 +48,7 @@ def add_to_carrinho(id):
     )
 
     if item_a_ser_adicionado is None:
+        print('item nao encontrado')
         return
 
     for user in usuarios:
@@ -58,6 +67,26 @@ def add_to_carrinho(id):
                     'preco': item_a_ser_adicionado['preco'],
                     'quantidade': 1
                 })
+            break
+
+    with open(usuarios_file_path, 'w') as usuarios_file:
+        json.dump(usuarios, usuarios_file)
+
+
+def save_carrinho(carrinho):
+    session_file_path = os.path.join(
+        os.path.dirname(__file__), '..', 'db', 'sessao.json')
+    with open(session_file_path, 'r') as session_file:
+        session = json.load(session_file)
+
+    usuarios_file_path = os.path.join(
+        os.path.dirname(__file__), '..', 'db', 'usuarios.json')
+    with open(usuarios_file_path, 'r') as usuarios_file:
+        usuarios = json.load(usuarios_file)
+
+    for user in usuarios:
+        if user['id'] == session['id']:
+            user['carrinho'] = carrinho
             break
 
     with open(usuarios_file_path, 'w') as usuarios_file:
