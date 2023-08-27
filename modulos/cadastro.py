@@ -7,6 +7,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QLineEdit, QPushB
 from template.cadastro import Ui_Cadastro
 from modulos.paginainicial import paginainicial
 
+
 class Cadastro(QDialog):
     def __init__(self, tela_login, *args, **argvs):
         super(Cadastro, self).__init__(*args, **argvs)
@@ -43,7 +44,8 @@ class Cadastro(QDialog):
         data = {
             "id": uuid_string,
             "usuario": username,
-            "senha": password
+            "senha": password,
+            "carrinho": []
         }
 
         usuarios = []
