@@ -1,3 +1,4 @@
+import os
 from PyQt5.QtWidgets import QDialog
 from template.paginainicial import Ui_Inicial
 from template.shorts import Ui_Shorts
@@ -25,6 +26,11 @@ class paginainicial(QDialog):
         self.tela_inicial = tela_inicial
 
     def sair(self):
+        current_dir = os.path.dirname(__file__)
+        with open(os.path.join(current_dir, '..', 'db', 'sessao.json', 'w')) as sessao_arquivo:
+            print('Salvando sessão...')
+            sessao_arquivo.write('')
+
         self.window = self.tela_inicial.show()
         self.clearMask()
         self.destroy()
