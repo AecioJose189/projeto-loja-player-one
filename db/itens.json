@@ -1,7 +1,14 @@
 [
     {
+        "id": 1,
         "nome": "??",
         "imagem": "",
+        "preco": 0
+    },
+    {
+        "id": 2,
+        "nome": "ikfdspjpofsd",
+        "imagem": "opfdsjkgposrk",
         "preco": 0
     }
 ]

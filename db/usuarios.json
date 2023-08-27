@@ -1,40 +1,23 @@
 [
     {
-        "id": 1,
-        "usuario": "aecio",
-        "senha": "123"
-    },
-    {
-        "id": "13fd48fe-a8d0-492c-b126-c43a5023aca5",
-        "usuario": "aecio",
-        "senha": "123"
-    },
-    {
         "id": "761213ce-beae-4a74-a81a-212c465db564",
         "usuario": "maconheiro123",
         "senha": "123maconheiro",
         "carrinho": [
             {
-                "nome": "??",
-                "imagem": "",
-                "preco": 5,
+                "id": 1,
+                "nome": "Simpsons",
+                "imagem": ":/produtos/bones/One piece, Naruto, Simpsons/simpsons-preto-bone.png",
+                "preco": 6,
                 "quantidade": 1
+            },
+            {
+                "id": 2,
+                "nome": "One piece",
+                "imagem": ":/produtos/bones/One piece, Naruto, Simpsons/onepiece-branco-bone.png",
+                "preco": 5,
+                "quantidade": 2
             }
         ]
-    },
-    {
-        "id": "19c8389c-e1ee-413e-8c80-92202550a90a",
-        "usuario": "aecio",
-        "senha": "123"
-    },
-    {
-        "id": "73fa7d98-55d1-4953-8a83-7d4e1d2187c1",
-        "usuario": "juniores",
-        "senha": "2324"
-    },
-    {
-        "id": "fffedb47-fe19-4ca8-ad10-2dd0e4c1721a",
-        "usuario": "gian",
-        "senha": "23"
     }
 ]
