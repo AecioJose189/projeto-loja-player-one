@@ -36,12 +36,12 @@ class Ui_Carrinho(object):
         self.label_3.setGeometry(QtCore.QRect(610, 600, 47, 13))
         self.label_3.setObjectName("label_3")
 
-        self.pushButton = QtWidgets.QPushButton(Dialog)
-        self.pushButton.setGeometry(QtCore.QRect(60, 630, 75, 23))
-        self.pushButton.setObjectName("pushButton")
-        self.pushButton_2 = QtWidgets.QPushButton(Dialog)
-        self.pushButton_2.setGeometry(QtCore.QRect(650, 640, 75, 23))
-        self.pushButton_2.setObjectName("pushButton_2")
+        self.button_voltar = QtWidgets.QPushButton(Dialog)
+        self.button_voltar.setGeometry(QtCore.QRect(60, 630, 75, 23))
+        self.button_voltar.setObjectName("pushButton")
+        self.button_finalizar = QtWidgets.QPushButton(Dialog)
+        self.button_finalizar.setGeometry(QtCore.QRect(650, 640, 75, 23))
+        self.button_finalizar.setObjectName("pushButton_2")
 
         self.scroll = QtWidgets.QScrollArea(Dialog)
         self.widgetScroll = QtWidgets.QWidget()
@@ -74,8 +74,8 @@ class Ui_Carrinho(object):
         self.label.setText(_translate("Dialog", "CARRINHO"))
         self.label_2.setText(_translate("Dialog", "Subtotal"))
         self.label_3.setText(_translate("Dialog", "Total"))
-        self.pushButton.setText(_translate("Dialog", "Voltar"))
-        self.pushButton_2.setText(_translate("Dialog", "Finalizar"))
+        self.button_voltar.setText(_translate("Dialog", "Voltar"))
+        self.button_finalizar.setText(_translate("Dialog", "Finalizar"))
 
 
 if __name__ == "__main__":
