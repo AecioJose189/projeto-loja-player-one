@@ -107,15 +107,15 @@ def limpar_carrinho():
         json.dump(usuarios, usuarios_file)
 
 
-def get_sub_total() -> float:
+def get_sub_total():
     carrinho = get_carrinho()
     if len(carrinho) > 0:
         return sum(item['preco'] * item['quantidade'] for item in carrinho)
     return 0
 
 
-def get_total() -> float:
-    subtotal: float = get_sub_total()
+def get_total():
+    subtotal = get_sub_total()
     if subtotal >= 130:
         return subtotal * 0.8
     return subtotal

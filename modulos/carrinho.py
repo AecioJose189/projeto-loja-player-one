@@ -63,7 +63,7 @@ class PaginaCarrinho(QDialog):
         self.clearMask()
         self.destroy()
 
-    def addItem(self, item: Item):
+    def addItem(self, item):
         item_layout_widget = QtWidgets.QWidget()
 
         item_layout_widget.setFixedSize(QtCore.QSize(678, 80))
@@ -94,7 +94,7 @@ class PaginaCarrinho(QDialog):
 
         self.ui.vBox.addWidget(item_layout_widget)
 
-    def on_quantity_changed(self, value: int, id: int):
+    def on_quantity_changed(self, value, id):
         carrinho = get_carrinho()
         for item in carrinho:
 
@@ -109,11 +109,11 @@ class PaginaCarrinho(QDialog):
 
         self.refresh_ui()
 
-    def get_string_reais(self, value: float) -> str:
+    def get_string_reais(self, value):
         return 'R$ 0,00' if value is None else f'R$ {value:.2f}'.replace('.', ',')
-    
+
     def finalize(self):
         limpar_carrinho()
-        self.window=historico(self.tela_inicial)
+        self.window = historico(self.tela_inicial)
         self.window.show()
         self.hide()
