@@ -3,11 +3,11 @@ from PyQt5.QtWidgets import QDialog
 from template.paginainicial import Ui_Inicial
 from template.shorts import Ui_Shorts
 
-from modulos.shorts import paginashorts
-from modulos.camisas import paginacamisas
-from modulos.broches import paginabroches
-from modulos.chapeus import paginachapeus
-from modulos.moletons import paginamoletom
+from modulos.shorts import PaginaShorts
+from modulos.camisas import PaginaCamisas
+from modulos.broches import PaginaBroches
+from modulos.chapeus import PaginaChapeus
+from modulos.moletons import PaginaMoletom
 from modulos.carrinho import PaginaCarrinho
 
 
@@ -35,27 +35,27 @@ class paginainicial(QDialog):
         self.destroy()
 
     def shorts(self):
-        self.window = paginashorts(self)
+        self.window = PaginaShorts(self)
         self.window.show()
         self.hide()
 
     def camisas(self):
-        self.window = paginacamisas(self)
+        self.window = PaginaCamisas(self)
         self.window.show()
         self.hide()
 
     def broches(self):
-        self.window = paginabroches(self)
+        self.window = PaginaBroches(self)
         self.window.show()
         self.hide()
 
     def chapeus(self):
-        self.window = paginachapeus(self)
+        self.window = PaginaChapeus(self)
         self.window.show()
         self.hide()
 
     def moletom(self):
-        self.window = paginamoletom(self)
+        self.window = PaginaMoletom(self)
         self.window.show()
         self.hide()
 

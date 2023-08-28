@@ -1,12 +1,12 @@
 import sys
 from PyQt5.QtWidgets import QDialog, QApplication
-from modulos.login import Login
+from modulos.login import PaginaLogin
 
 
 def main():
     app = QApplication(sys.argv)
     if QDialog.Accepted:
-        window = Login()
+        window = PaginaLogin()
         window.show()
 
     sys.exit(app.exec_())

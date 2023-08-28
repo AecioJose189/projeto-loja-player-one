@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import QDialog
 from modulos.carrinho_funcs import get_carrinho, get_sub_total, get_total, save_carrinho, limpar_carrinho
 from template.carrinho import Ui_Carrinho
 from PyQt5 import QtCore, QtWidgets
-from modulos.historicodecompra import historico
+from modulos.historicodecompra import PaginaHistorico
 
 
 @dataclass
@@ -114,6 +114,6 @@ class PaginaCarrinho(QDialog):
 
     def finalize(self):
         limpar_carrinho()
-        self.window = historico(self.tela_inicial)
+        self.window = PaginaHistorico(self.tela_inicial)
         self.window.show()
         self.hide()

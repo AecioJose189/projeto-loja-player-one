@@ -3,13 +3,13 @@ from template.login import Ui_Login
 import os
 import json
 
-from modulos.cadastro import Cadastro
+from modulos.cadastro import PaginaCadastro
 from modulos.paginainicial import paginainicial
 
 
-class Login(QDialog):
+class PaginaLogin(QDialog):
     def __init__(self, *args, **argvs):
-        super(Login, self).__init__(*args, **argvs)
+        super(PaginaLogin, self).__init__(*args, **argvs)
         self.ui = Ui_Login()
         self.ui.setupUi(self)
         self.ui.botao_login.clicked.connect(self.fazer_login)
@@ -41,7 +41,7 @@ class Login(QDialog):
                             {'id': user['id']}, sessao_arquivo)
 
     def cadastre_se(self):
-        self.window = Cadastro(self)
+        self.window = PaginaCadastro(self)
         self.window.show()
         self.hide()
 

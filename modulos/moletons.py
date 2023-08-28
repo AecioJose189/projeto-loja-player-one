@@ -5,9 +5,9 @@ from modulos.carrinho_funcs import add_to_carrinho
 from template.moletom import Ui_Moletons
 
 
-class paginamoletom(QDialog):
+class PaginaMoletom(QDialog):
     def __init__(self, tela_inicial, *args, **argvs):
-        super(paginamoletom, self).__init__(*args, **argvs)
+        super(PaginaMoletom, self).__init__(*args, **argvs)
         self.ui = Ui_Moletons()
         self.ui.setupUi(self)
         self.ui.botao_voltar.clicked.connect(self.voltando)

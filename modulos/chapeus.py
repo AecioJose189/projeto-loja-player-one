@@ -5,9 +5,9 @@ from modulos.carrinho_funcs import add_to_carrinho
 from template.chapeus import Ui_Chapeus
 
 
-class paginachapeus(QDialog):
+class PaginaChapeus(QDialog):
     def __init__(self, tela_inicial, *args, **argvs):
-        super(paginachapeus, self).__init__(*args, **argvs)
+        super(PaginaChapeus, self).__init__(*args, **argvs)
         self.ui = Ui_Chapeus()
         self.ui.setupUi(self)
         self.ui.botao_voltar.clicked.connect(self.voltando)

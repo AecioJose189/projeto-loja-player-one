@@ -5,9 +5,9 @@ from template.broches import Ui_Broches
 from modulos.carrinho_funcs import add_to_carrinho
 
 
-class paginabroches(QDialog):
+class PaginaBroches(QDialog):
     def __init__(self, tela_inicial, *args, **argvs):
-        super(paginabroches, self).__init__(*args, **argvs)
+        super(PaginaBroches, self).__init__(*args, **argvs)
         self.ui = Ui_Broches()
         self.ui.setupUi(self)
         self.ui.botao_voltar.clicked.connect(self.voltando)

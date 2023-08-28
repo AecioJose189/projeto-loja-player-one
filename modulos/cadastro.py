@@ -8,9 +8,9 @@ from template.cadastro import Ui_Cadastro
 from modulos.paginainicial import paginainicial
 
 
-class Cadastro(QDialog):
+class PaginaCadastro(QDialog):
     def __init__(self, tela_login, *args, **argvs):
-        super(Cadastro, self).__init__(*args, **argvs)
+        super(PaginaCadastro, self).__init__(*args, **argvs)
         self.ui = Ui_Cadastro()
         self.ui.setupUi(self)
         self.ui.botao_voltar.clicked.connect(self.voltar)

@@ -5,9 +5,9 @@ from template.shorts import Ui_Shorts
 from modulos.carrinho_funcs import add_to_carrinho
 
 
-class paginashorts(QDialog):
+class PaginaShorts(QDialog):
     def __init__(self, tela_inicial, *args, **argvs):
-        super(paginashorts, self).__init__(*args, **argvs)
+        super(PaginaShorts, self).__init__(*args, **argvs)
         self.ui = Ui_Shorts()
         self.ui.setupUi(self)
         self.ui.botao_voltar.clicked.connect(self.voltando)
