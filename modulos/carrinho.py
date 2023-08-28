@@ -1,8 +1,9 @@
 from dataclasses import dataclass
 from PyQt5.QtWidgets import QDialog
-from modulos.carrinho_funcs import get_carrinho, get_sub_total, get_total, save_carrinho
+from modulos.carrinho_funcs import get_carrinho, get_sub_total, get_total, save_carrinho, limpar_carrinho
 from template.carrinho import Ui_Carrinho
 from PyQt5 import QtCore, QtWidgets
+from modulos.historicodecompra import historico
 
 
 @dataclass
@@ -20,6 +21,7 @@ class PaginaCarrinho(QDialog):
         self.ui.setupUi(self)
         self.tela_inicial = tela_inicial
         self.ui.button_voltar.clicked.connect(self.voltando)
+        self.ui.button_finalizar.clicked.connect(self.finalize)
         self.carrinho: list[Item] = [
             Item(item['id'], item['imagem'], item['quantidade'], item['preco']) for item in get_carrinho()
         ]
@@ -109,3 +111,9 @@ class PaginaCarrinho(QDialog):
 
     def get_string_reais(self, value: float) -> str:
         return 'R$ 0,00' if value is None else f'R$ {value:.2f}'.replace('.', ',')
+    
+    def finalize(self):
+        limpar_carrinho()
+        self.window=historico(self.tela_inicial)
+        self.window.show()
+        self.hide()
