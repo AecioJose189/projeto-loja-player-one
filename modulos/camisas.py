@@ -32,6 +32,6 @@ class PaginaCamisas(QDialog):
         self.destroy()
 
     def carrinho(self):
-        self.window = PaginaCarrinho(self)
+        self.window = PaginaCarrinho(self.tela_inicial)
         self.window.show()
         self.hide()

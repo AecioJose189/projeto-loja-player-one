@@ -60,6 +60,6 @@ class paginainicial(QDialog):
         self.hide()
 
     def carrinho(self):
-        self.window = PaginaCarrinho(self)
+        self.window = PaginaCarrinho(self.tela_inicial)
         self.window.show()
         self.hide()
