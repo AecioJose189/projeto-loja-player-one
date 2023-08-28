@@ -87,6 +87,26 @@ def save_carrinho(carrinho):
         json.dump(usuarios, usuarios_file)
 
 
+def limpar_carrinho():
+    session_file_path = os.path.join(
+        os.path.dirname(__file__), '..', 'db', 'sessao.json')
+    with open(session_file_path, 'r') as session_file:
+        session = json.load(session_file)
+
+    usuarios_file_path = os.path.join(
+        os.path.dirname(__file__), '..', 'db', 'usuarios.json')
+    with open(usuarios_file_path, 'r') as usuarios_file:
+        usuarios = json.load(usuarios_file)
+
+    for user in usuarios:
+        if user['id'] == session['id']:
+            user['carrinho'] = []
+            break
+
+    with open(usuarios_file_path, 'w') as usuarios_file:
+        json.dump(usuarios, usuarios_file)
+
+
 def get_sub_total() -> float:
     carrinho = get_carrinho()
     if len(carrinho) > 0:
